@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="en">
+
+
+<!-- Mirrored from regexone.com/lesson/introduction_abcs by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 25 Apr 2025 10:28:46 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" />
+    <meta name="application-name" content="EasyRegex - 通过简单的交互式练习学习正则表达式." />
+    <meta name="application-url" content="../index.html" />
+    <meta name="created" content="2025-05-01" />
+    <meta name="description" content="EasyRegex通过一些列简单的交互式练习，帮你快速学习正则表达式的使用" />
+    <meta name="keywords" content="EasyRegex,regular expressions,regex,regexp,学习,交互，正则表达式" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <meta property="fb:admins" content="28111059" /> -->
+    <!-- <link type="image/png" href="../cs/images/favicon.png" rel="icon"> -->
+    <title>EasyRegex - 学习正则表达式 - 匹配重复字符</title>
+
+    <!-- PREFETCH -->
+    <!-- <link rel="dns-prefetch" href="http://cdnjs.cloudflare.com/">
+    <link rel="dns-prefetch" href="http://fonts.googleapis.com/">
+    <link rel="dns-prefetch" href="http://www.google-analytics.com/">
+    <link rel="dns-prefetch" href="http://pagead2.googlesyndication.com/">
+    <link rel="dns-prefetch" href="http://d33k25wqbnvk17.cloudfront.net/">
+    <link rel="dns-prefetch" href="http://www.paypal.com/">
+    <link rel="dns-prefetch" href="http://www.paypalobjects.com/"> -->
+
+    <!-- CSS -->
+    <link type="text/css" href="../src/twitter-bootstrap/3.3.5/css/bootstrap.min.css"
+        rel="stylesheet">
+    <!-- <link type="text/css" href="https://fonts.googleapis.com/css?family=Ruda:400,700" rel="stylesheet"> -->
+    <link type="text/css" href="../cs/css/main.mina961.css?version=63" rel="stylesheet">
+    <style type="text/css">
+    </style>
+</head>
+
+<!-- BODY -->
+
+<body class="">
+
+
+    <div class="container">
+        <div class="row content">
+            <!-- NAV -->
+            <div class="header">
+                <a href="../index.html" class="site_logo" title="Home">
+                    <img src="../cs/images/favicon.png" alt="EasyRegex icon" height="45" />
+                </a>
+                <a href="../index.html" class="site_name" title="Home">
+                    <span><span class="highlight">Easy</span>Regex</span><br />
+                    <span class="desc hide-max-md">通过简单的交互式练习学习正则表达式</span>
+                </a>
+                <div class="menu_buttons">
+                    <a href="../lesson/introduction_abcs.html" class="menu_button lesson_button" title="Lessons menu">
+                        <img src="../cs/images/icon_tutorial.png" alt="Interactive Tutorial" /> <span
+                            class="hide-max-sm">课程与练习</span>
+                        <!-- <span class="hide-max-xs">Tutorial</span> -->
+                    </a>
+                    <a href="../problem/matching_decimal_numbers.html" class="menu_button more_button"
+                        title="References &amp; More menu">
+                        <img src="../cs/images/icon_reference.png" alt="References &amp; More" /> <span
+                            class="hide-max-xs">参考资料</span>
+                        <!-- <span class="hide-max-sm">&amp; More</span> -->
+                    </a>
+                </div>
+            </div>
+
+            <!-- MENU -->
+            <div class="menu_container">
+                <div class="lesson_menu menu">
+                    <div class="title">所有课程</div>
+                    
+                        <a href="../lesson/introduction_abcs.html" class=""
+                            title="第1课：简介与字母表基础">第1课：简介与字母表基础</a>
+                    
+                        <a href="../lesson/letters_and_digits.html" class=""
+                            title="第1½课：123s">第1½课：123s</a>
+                    
+                        <a href="../lesson/wildcards_dot.html" class=""
+                            title="第2课：通配符：点号">第2课：通配符：点号</a>
+                    
+                        <a href="../lesson/matching_characters.html" class=""
+                            title="第3课：匹配特定字符">第3课：匹配特定字符</a>
+                    
+                        <a href="../lesson/excluding_characters.html" class=""
+                            title="第4课：排除特定字符类">第4课：排除特定字符类</a>
+                    
+                        <a href="../lesson/character_ranges.html" class=""
+                            title="第5课：匹配字符范围">第5课：匹配字符范围</a>
+                    
+                        <a href="../lesson/repeating_characters.html" class="active"
+                            title="第6课：匹配重复字符">第6课：匹配重复字符</a>
+                    
+                        <a href="../lesson/kleene_operators.html" class=""
+                            title="第7课：Kleene星号和加号">第7课：Kleene星号和加号</a>
+                    
+                        <a href="../lesson/optional_characters.html" class=""
+                            title="第8课：可选字符">第8课：可选字符</a>
+                    
+                        <a href="../lesson/whitespaces.html" class=""
+                            title="第9课：空白字符">第9课：空白字符</a>
+                    
+                        <a href="../lesson/line_beginning_end.html" class=""
+                            title="第10课：行首和行尾">第10课：行首和行尾</a>
+                    
+                        <a href="../lesson/capturing_groups.html" class=""
+                            title="第11课：组">第11课：组</a>
+                    
+                        <a href="../lesson/nested_groups.html" class=""
+                            title="第12课：嵌套分组">第12课：嵌套分组</a>
+                    
+                        <a href="../lesson/more_groups.html" class=""
+                            title="第13课：更多组操作">第13课：更多组操作</a>
+                    
+                        <a href="../lesson/conditionals.html" class=""
+                            title="第14课：一切都是条件性的">第14课：一切都是条件性的</a>
+                    
+                        <a href="../lesson/misc_meta_characters.html" class=""
+                            title="第15课：其他特殊字符">第15课：其他特殊字符</a>
+                    
+                        <a href="../lesson/end.html" class=""
+                            title="第X课：终章和继续">第X课：终章和继续</a>
+                    
+                    <div class="title">练习问题</div>
+                    
+                        <a href="../problem/matching_decimal_numbers.html" class=""
+                            title="问题1：匹配十进制数">问题1：匹配十进制数</a>
+                    
+                        <a href="../problem/matching_phone_numbers.html" class=""
+                            title="问题2：匹配电话号码">问题2：匹配电话号码</a>
+                    
+                        <a href="../problem/matching_emails.html" class=""
+                            title="问题3：匹配电子邮件地址">问题3：匹配电子邮件地址</a>
+                    
+                        <a href="../problem/matching_html.html" class=""
+                            title="问题4：匹配HTML">问题4：匹配HTML</a>
+                    
+                        <a href="../problem/matching_filenames.html" class=""
+                            title="问题5：匹配特定的文件名">问题5：匹配特定的文件名</a>
+                    
+                        <a href="../problem/trimming_whitespace.html" class=""
+                            title="问题6：去除行首和行尾的空白字符">问题6：去除行首和行尾的空白字符</a>
+                    
+                        <a href="../problem/matching_dates.html" class=""
+                            title="问题7：从日志文件中提取信息">问题7：从日志文件中提取信息</a>
+                    
+                        <a href="../problem/extracting_url_data.html" class=""
+                            title="问题8：解析并提取 URL 中的数据">问题8：解析并提取 URL 中的数据</a>
+                    
+                        <a href="../problem/complete.html" class=""
+                            title="问题X：终章和继续">问题X：终章和继续</a>
+                    
+                </div>
+                <div class="practice_menu menu">
+                    <div class="title">编程语言</div>
+                    <a href="../references/csharp.html" class="" title="C#">C#</a>
+                    <a href="../references/javascript.html" class="" title="Javascript">Javascript</a>
+                    <a href="../references/java.html" class="" title="Java">Java</a>
+                    <a href="../references/php.html" class="" title="PHP">PHP</a>
+                    <a href="../references/python.html" class="" title="Python">Python</a>
+                </div>
+            </div>
+
+            <!-- LESSON -->
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-9">
+                    <!-- LESSON TITLE & BODY -->
+                    <div class="lesson">
+                        
+                            <div class="title">第6课：匹配重复字符</div>
+                        
+                        
+                        <div class="body">
+                            <p><em>注意：下文中提到的某些重复语法在所有正则表达式实现中并不完全支持。</em></p>
+<p>到目前为止，我们已经学习了如何指定匹配字符的范围，但如果我们想要匹配重复出现的字符个数呢？一种方法是直接明确写出需要的字符数量，例如：\d\d\d，它会匹配恰好三个数字。</p>
+<p>更方便的一种方式是使用大括号 <strong>{}</strong> 语法来<strong>指定字符的重复次数</strong>。例如，a{3} 表示匹配连续出现三次的字符 a。某些正则引擎甚至支持<strong>重复次数范围</strong>的写法，比如：a{1,3} 表示匹配 至少 1 次、至多 3 次 的 a 字符。</p>
+<p>这个“重复限定符”可以用于任意字符，包括特殊元字符。例如：</p>
+<ul>
+<li>w{3}：匹配连续三个 w</li>
+<li>[wxy]{5}：匹配 5 个字符，每个字符可以是 w、x 或 y</li>
+<li>.{2,6}：匹配任意字符，数量在 2 到 6 个之间</li>
+</ul>
+<p>在下面的几行字符串中，最后一行只有一个 z，这并不是我们认为的俚语 “wazzup?” 的标准拼写。请尝试使用上面提到的大括号语法，写一个只匹配前两个拼写的正则表达式模式。</p>
+                        </div>
+                    </div>
+
+                    <!-- PROBLEMS -->
+                     
+                        <div class="exercise">
+                            <div class="title">
+                                练习 6: 匹配重复字符
+                            </div>
+                            <table class="tasks_table">
+                                <tr class="problem_header">
+                                    <td class="task">Task</td>
+                                    <td class="text">Text</td>
+                                    
+                                    <td style="width: 2.3125em">&nbsp;</td>
+                                </tr>
+                                
+                                <tr class="problem">
+                                    <td class="task">匹配</td>
+                                    <td class="text">wazzzzzup</td>
+                                    
+                                    <td class="result"><img src="../cs/images/task_default.png" alt="To be completed" /></td>
+                                </tr>
+                                
+                                <tr class="problem">
+                                    <td class="task">匹配</td>
+                                    <td class="text">wazzzup</td>
+                                    
+                                    <td class="result"><img src="../cs/images/task_default.png" alt="To be completed" /></td>
+                                </tr>
+                                
+                                <tr class="problem">
+                                    <td class="task">跳过</td>
+                                    <td class="text">wazup</td>
+                                    
+                                    <td class="result"><img src="../cs/images/task_default.png" alt="To be completed" /></td>
+                                </tr>
+                                
+                            </table>
+                            <div class="input_and_continue row" style="margin: 0;">
+                                <form action="https://regexone.com/lesson/letters_and_digits" method="get">
+                                    <input class="exercise_input_field col-xs-12 col-sm-9 col-md-9" type="text"
+                                        autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false"
+                                        placeholder="Type your pattern" />
+                                    <input class="continue disabled col-xs-12 col-sm-3 col-md-3" disabled type="submit"
+                                        value="Continue &rsaquo;" />
+                                </form>
+                            </div>
+                            <div class="row" style="margin: 0">
+                                <div class="solution col-xs-12">
+                                    <table>
+                                        <tr>
+                                            <td class="title">提示</td>
+                                            <td><p>前两行中包含多个 'z' 字符需要匹配，因此正则表达式 <a class="editor_val" href="#">waz{3,5}up</a> 可以匹配所有包含 3 到 5 个 z 的字符串。</p></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="solution_hint">
+                                解决上面的问题以继续到, 或者可以参考<a class="show_solution_button" href="#">答案</a>。
+                            </div>
+                        </div>
+                    
+
+                    <!-- FOOTER -->
+                    <div class="footer col-xs-12 col-sm-12 col-md-6">
+                        
+                            上一课 &ndash; <a href="../lesson/character_ranges.html" title="第5课：匹配字符范围">第5课：匹配字符范围</a><br />
+                        
+                        
+                            下一课 &ndash; <a href="../lesson/kleene_operators.html" title="第7课：Kleene星号和加号">第7课：Kleene星号和加号</a><br />
+                        
+                    </div>
+                    <div class="footer ralign col-xs-12 col-md-6">
+                        如果你觉得RegexOne有用，请考虑捐赠 <br />
+                        <a href="#" onclick="triggerDonation()" title="Paypal donation"> Paypal (5€)</a>,<a
+                            href="../utilities/support.html" title="支付宝微信支持"> 微信/支付宝 </a> 支持我们.
+                    </div>
+                </div>
+
+                <!-- NOTES -->
+                <div class="cheatsheet hidden-xs hidden-sm col-md-3">
+                    <div class="title">Lesson Notes</div>
+                    <table class="links">
+
+                        
+                        <tr class=" inactive ">
+                            <td class="status"></td>
+                            <td class="key">
+                                <a href="../lesson/introduction_abcs.html" title="第1课：简介与字母表基础">abc&hellip;</a>
+                            </td>
+                            <td class="description">
+                                <a href="../lesson/introduction_abcs.html" title="第1课：简介与字母表基础">字母</a>
+                            </td>
+                        </tr>
+                        
+                        <tr class=" inactive ">
+                            <td class="status"></td>
+                            <td class="key">
+                                <a href="../lesson/letters_and_digits.html" title="第1½课：123s">123&hellip;</a>
+                            </td>
+                            <td class="description">
+                                <a href="../lesson/letters_and_digits.html" title="第1½课：123s">数字</a>
+                            </td>
+                        </tr>
+                        
+                        <tr class=" inactive ">
+                            <td class="status"></td>
+                            <td class="key">
+                                <a href="../lesson/letters_and_digits.html" title="第1½课：123s">\d</a>
+                            </td>
+                            <td class="description">
+                                <a href="../lesson/letters_and_digits.html" title="第1½课：123s">任意数字</a>
+                            </td>
+                        </tr>
+                        
+                        <tr class=" inactive ">
+                            <td class="status"></td>
+                            <td class="key">
+                                <a href="../lesson/letters_and_digits.html" title="第1½课：123s">\D</a>
+                            </td>
+                            <td class="description">
+                                <a href="../lesson/letters_and_digits.html" title="第1½课：123s">任意非数字</a>
+                            </td>
+                        </tr>
+                        
+                        <tr class=" inactive ">
+                            <td class="status"></td>
+                            <td class="key">
+                                <a href="../lesson/wildcards_dot.html" title="第2课：通配符：点号">.</a>
+                            </td>
+                            <td class="description">
+                                <a href="../lesson/wildcards_dot.html" title="第2课：通配符：点号">任意字符</a>
+                            </td>
+                        </tr>
+                        
+                        <tr class=" inactive ">
+                            <td class="status"></td>
+                            <td class="key">
+                                <a href="../lesson/wildcards_dot.html" title="第2课：通配符：点号">\.</a>
+                            </td>
+                            <td class="description">
+                                <a href="../lesson/wildcards_dot.html" title="第2课：通配符：点号">句号（英文）</a>
+                            </td>
+                        </tr>
+                        
+                        <tr class=" inactive ">
+                            <td class="status"></td>
+                            <td class="key">
+                                <a href="../lesson/matching_characters.html" title="第3课：匹配特定字符">[abc]</a>
+                            </td>
+                            <td class="description">
+                                <a href="../lesson/matching_characters.html" title="第3课：匹配特定字符">只有abc</a>
+                            </td>
+                        </tr>
+                        
+                        <tr class=" inactive ">
+                            <td class="status"></td>
+                            <td class="key">
+                                <a href="../lesson/excluding_characters.html" title="第4课：排除特定字符类">[^abc]</a>
+                            </td>
+                            <td class="description">
+                                <a href="../lesson/excluding_characters.html" title="第4课：排除特定字符类">不包含abc</a>
+                            </td>
+                        </tr>
+                        
+                        <tr class=" inactive ">
+                            <td class="status"></td>
+                            <td class="key">
+                                <a href="../lesson/character_ranges.html" title="第5课：匹配字符范围">[a-z]</a>
+                            </td>
+                            <td class="description">
+                                <a href="../lesson/character_ranges.html" title="第5课：匹配字符范围">小写字母</a>
+                            </td>
+                        </tr>
+                        
+                        <tr class=" inactive ">
+                            <td class="status"></td>
+                            <td class="key">
+                                <a href="../lesson/character_ranges.html" title="第5课：匹配字符范围">[0-9]</a>
+                            </td>
+                            <td class="description">
+                                <a href="../lesson/character_ranges.html" title="第5课：匹配字符范围">数字</a>
+                            </td>
+                        </tr>
+                        
+                        <tr class=" inactive ">
+                            <td class="status"></td>
+                            <td class="key">
+                                <a href="../lesson/character_ranges.html" title="第5课：匹配字符范围">\w</a>
+                            </td>
+                            <td class="description">
+                                <a href="../lesson/character_ranges.html" title="第5课：匹配字符范围">任意字母或数字</a>
+                            </td>
+                        </tr>
+                        
+                        <tr class=" inactive ">
+                            <td class="status"></td>
+                            <td class="key">
+                                <a href="../lesson/character_ranges.html" title="第5课：匹配字符范围">\W</a>
+                            </td>
+                            <td class="description">
+                                <a href="../lesson/character_ranges.html" title="第5课：匹配字符范围">任意非字母或数字</a>
+                            </td>
+                        </tr>
+                        
+                        <tr class=" active ">
+                            <td class="status"></td>
+                            <td class="key">
+                                <a href="../lesson/repeating_characters.html" title="第6课：匹配重复字符">{m}</a>
+                            </td>
+                            <td class="description">
+                                <a href="../lesson/repeating_characters.html" title="第6课：匹配重复字符">重复m次</a>
+                            </td>
+                        </tr>
+                        
+                        <tr class=" active ">
+                            <td class="status"></td>
+                            <td class="key">
+                                <a href="../lesson/repeating_characters.html" title="第6课：匹配重复字符">{m,n}</a>
+                            </td>
+                            <td class="description">
+                                <a href="../lesson/repeating_characters.html" title="第6课：匹配重复字符">重复m到n次</a>
+                            </td>
+                        </tr>
+                        
+                        <tr class=" inactive ">
+                            <td class="status"></td>
+                            <td class="key">
+                                <a href="../lesson/kleene_operators.html" title="第7课：Kleene星号和加号">*</a>
+                            </td>
+                            <td class="description">
+                                <a href="../lesson/kleene_operators.html" title="第7课：Kleene星号和加号">0或多次</a>
+                            </td>
+                        </tr>
+                        
+                        <tr class=" inactive ">
+                            <td class="status"></td>
+                            <td class="key">
+                                <a href="../lesson/kleene_operators.html" title="第7课：Kleene星号和加号">+</a>
+                            </td>
+                            <td class="description">
+                                <a href="../lesson/kleene_operators.html" title="第7课：Kleene星号和加号">1或多次</a>
+                            </td>
+                        </tr>
+                        
+                        <tr class=" inactive ">
+                            <td class="status"></td>
+                            <td class="key">
+                                <a href="../lesson/optional_characters.html" title="第8课：可选字符">?</a>
+                            </td>
+                            <td class="description">
+                                <a href="../lesson/optional_characters.html" title="第8课：可选字符">可选字符</a>
+                            </td>
+                        </tr>
+                        
+                        <tr class=" inactive ">
+                            <td class="status"></td>
+                            <td class="key">
+                                <a href="../lesson/whitespaces.html" title="第9课：空白字符">\s</a>
+                            </td>
+                            <td class="description">
+                                <a href="../lesson/whitespaces.html" title="第9课：空白字符">任意空白字符</a>
+                            </td>
+                        </tr>
+                        
+                        <tr class=" inactive ">
+                            <td class="status"></td>
+                            <td class="key">
+                                <a href="../lesson/whitespaces.html" title="第9课：空白字符">\S</a>
+                            </td>
+                            <td class="description">
+                                <a href="../lesson/whitespaces.html" title="第9课：空白字符">任意非空白字符</a>
+                            </td>
+                        </tr>
+                        
+                        <tr class=" inactive ">
+                            <td class="status"></td>
+                            <td class="key">
+                                <a href="../lesson/line_beginning_end.html" title="第10课：行首和行尾">^&hellip;$</a>
+                            </td>
+                            <td class="description">
+                                <a href="../lesson/line_beginning_end.html" title="第10课：行首和行尾">行首</a>
+                            </td>
+                        </tr>
+                        
+                        <tr class=" inactive ">
+                            <td class="status"></td>
+                            <td class="key">
+                                <a href="../lesson/capturing_groups.html" title="第11课：组">(&hellip;)</a>
+                            </td>
+                            <td class="description">
+                                <a href="../lesson/capturing_groups.html" title="第11课：组">捕获组</a>
+                            </td>
+                        </tr>
+                        
+                        <tr class=" inactive ">
+                            <td class="status"></td>
+                            <td class="key">
+                                <a href="../lesson/nested_groups.html" title="第12课：嵌套分组">(a(bc))</a>
+                            </td>
+                            <td class="description">
+                                <a href="../lesson/nested_groups.html" title="第12课：嵌套分组">捕获子组</a>
+                            </td>
+                        </tr>
+                        
+                        <tr class=" inactive ">
+                            <td class="status"></td>
+                            <td class="key">
+                                <a href="../lesson/more_groups.html" title="第13课：更多组操作">(.*)</a>
+                            </td>
+                            <td class="description">
+                                <a href="../lesson/more_groups.html" title="第13课：更多组操作">捕获所有组</a>
+                            </td>
+                        </tr>
+                        
+                        <tr class=" inactive ">
+                            <td class="status"></td>
+                            <td class="key">
+                                <a href="../lesson/conditionals.html" title="第14课：一切都是条件性的">(abc|def)</a>
+                            </td>
+                            <td class="description">
+                                <a href="../lesson/conditionals.html" title="第14课：一切都是条件性的">匹配abd或者def</a>
+                            </td>
+                        </tr>
+                        
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- GA -->
+    <!-- <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+            <div class="ga">
+                <script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4789820854456926"
+                    data-ad-slot="6515249890" data-ad-format="auto"></ins>
+            </div>
+        </div>
+    </div> -->
+
+    <div id="paypal" style="visibility: hidden">
+        <form id="paypal_form" action="https://www.paypal.com/donate" method="post" target="_blank">
+            <input type="hidden" name="business" value="looooong.chen@gmail.com">
+            <input type="hidden" name="item_name" value="Support RegeX">
+            <input type="hidden" name="currency_code" value="EUR">
+            <input type="hidden" name="amount" value="5.00">
+        </form>
+    </div>
+
+    <!-- JS -->
+
+    <script type="text/javascript" src="../src/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="../src/underscore.js/1.8.3/underscore-min.js"></script>
+    <script type="text/javascript"
+        src="../src/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+        src="../src/highlight.js/8.5/highlight.min.js"></script>
+    <script type="text/javascript" src="../cs/js/main.mina961.js?version=63"></script>
+
+    <script>
+        function triggerDonation() {
+          document.getElementById('paypal_form').submit();
+        }
+    </script>
+
+    <!-- GA -->
+    <script async src="../../pagead2.googlesyndication.com/pagead/js/ff7e9.txt?client=ca-pub-4789820854456926"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        "use strict";
+
+        // Setup the problems
+        // var problemsJson = "[{\"text\": \"abcdefg\", \"type\": \"match\"}, {\"text\": \"abcde\", \"type\": \"match\"}, {\"text\": \"abc\", \"type\": \"match\"}]";
+        var problemsJson = "[{\"text\": \"wazzzzzup\", \"type\": \"match\"}, {\"text\": \"wazzzup\", \"type\": \"match\"}, {\"text\": \"wazup\", \"type\": \"skip\"}]";
+
+        initializeDocumentLoad(problemsJson, "lesson/introduction_abcs");
+        problemsJson = null;
+    </script>
+
+
+
+</body>
+
+
+<!-- Mirrored from regexone.com/lesson/introduction_abcs by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 25 Apr 2025 10:28:46 GMT -->
+
+</html>
